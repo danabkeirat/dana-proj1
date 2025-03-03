@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الحجوزات</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- شريط التنقل -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">منتجع الجولف</div>
+            <ul class="nav-links">
+                <li><a href="index.html">الرئيسية</a></li>
+                <li><a href="facilities.html">المرافق</a></li>
+                <li><a href="booking.html">الحجوزات</a></li>
+                <li><a href="contact.html">اتصل بنا</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- قسم العروض -->
+    <section class="offers">
+        <h1 class="title">احجز مكانك الآن</h1>
+        <h2>🎉 عروض الحجز المميزة 🎉</h2>
+        <div class="offers-container">
+            <div class="offer-card">
+                <h3>🏌️‍♂️ باقة نهاية الأسبوع</h3>
+                <p>استمتع بجولة جولف فاخرة + إقامة ليلة واحدة</p>
+                <span class="price">299$</span>
+            </div>
+            <div class="offer-card">
+                <h3>🌟 الباقة العائلية</h3>
+                <p>ملعب جولف + وجبة عشاء فاخرة للعائلة</p>
+                <span class="price">399$</span>
+            </div>
+            <div class="offer-card">
+                <h3>⛳ تجربة الجولف الاحترافية</h3>
+                <p>جولة جولف مع مدرب محترف لمدة 3 ساعات</p>
+                <span class="price">199$</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- نموذج الحجز -->
+    <section class="booking-form">
+        <h2>املأ النموذج للحجز</h2>
+        <form>
+            <label for="name">الاسم:</label>
+            <input type="text" id="name" required>
+            
+            <label for="date">تاريخ الحجز:</label>
+            <input type="date" id="date" required>
+
+            <label for="guests">عدد الضيوف:</label>
+            <input type="number" id="guests" required>
+
+            <br><br>
+            <button type="submit" class="btn">إرسال الحجز</button>
+        </form>
+    </section>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const form = document.querySelector("form");
+    
+            form.addEventListener("submit", function (event) {
+                event.preventDefault(); // منع الإرسال الفعلي للنموذج
+                
+                // جمع البيانات
+                const name = document.getElementById("name").value;
+                const date = document.getElementById("date").value;
+                const guests = document.getElementById("guests").value;
+    
+                // التحقق من أن الحقول ممتلئة
+                if (name && date && guests) {
+                    alert(`شكرًا لك، ${name}! تم حجز مكانك بنجاح بتاريخ ${date} لعدد ${guests} ضيف/ضيوف.`);
+                    form.reset(); // إعادة تعيين الحقول
+                } else {
+                    alert("يرجى ملء جميع الحقول قبل الإرسال.");
+                }
+            });
+        });
+    </script>
+</body>
+</html>

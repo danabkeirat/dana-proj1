@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>اتصل بنا</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- شريط التنقل -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">منتجع الجولف</div>
+            <ul class="nav-links">
+                <li><a href="index.html">الرئيسية</a></li>
+                <li><a href="facilities.html">المرافق</a></li>
+                <li><a href="booking.html">الحجوزات</a></li>
+                <li><a href="contact.html">اتصل بنا</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- قسم نموذج الاتصال -->
+    <section class="contact-form">
+        <h1 class="title">تواصل معنا</h1>
+        <h2>نحن هنا لخدمتك</h2>
+        <form>
+            <label for="message">رسالتك:</label>
+            <textarea id="message" required></textarea>
+            <button type="submit" class="btn">إرسال</button>
+        </form>
+        
+        <div class="button-container">
+            <a href="index.html" class="btn">الرئيسية</a>
+            <a href="facilities.html" class="btn">المرافق</a>
+            <a href="booking.html" class="btn">الحجوزات</a>
+        </div>
+    </section>
+
+    <!-- قسم التعليقات والتقييمات -->
+    <section class="reviews">
+        <h2>آراء العملاء</h2>
+        <form>
+            <label for="review">تعليقك:</label>
+            <textarea id="review" placeholder="اكتب تعليقك هنا..." required></textarea>
+
+            <label for="rating">تقييمك:</label>
+            <select id="rating" required>
+                <option value="5">⭐⭐⭐⭐⭐</option>
+                <option value="4">⭐⭐⭐⭐</option>
+                <option value="3">⭐⭐⭐</option>
+                <option value="2">⭐⭐</option>
+                <option value="1">⭐</option>
+            </select>
+
+            <button type="submit" class="btn">إرسال التقييم</button>
+        </form>
+        
+        <div class="user-reviews">
+            <h3>التعليقات السابقة:</h3>
+            <p>لم يتم إضافة تعليقات بعد.</p>
+        </div>
+    </section>
+
+</body>
+</html>
