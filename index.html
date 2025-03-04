@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>منتجع الجولف</title>
     <link rel="stylesheet" href="style.css">
+    <div class="menu-icon" onclick="toggleMenu()">☰</div>
 </head>
 <body>
 
@@ -31,4 +32,10 @@
     </section>
 
 </body>
+<script>
+    function toggleMenu() {
+        var navLinks = document.querySelector('.nav-links');
+        navLinks.classList.toggle('active');
+    }
+    </script>
 </html>

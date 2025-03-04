@@ -262,3 +262,79 @@ p {
     transform: translateY(-3px);
     box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.3);
 }
+p {
+    font-size: 30px;
+}
+/* تحسين شريط التنقل ليكون متجاوبًا */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    background-color: #333;
+    color: white;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+}
+
+/* جعل القائمة مخفية تلقائيًا في الهاتف */
+@media screen and (max-width: 768px) {
+    .nav-links {
+        display: none; /* إخفاء القائمة عند تصغير الشاشة */
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background-color: #333;
+        width: 100%;
+        text-align: center;
+    }
+
+    .nav-links li {
+        padding: 15px;
+    }
+
+    .nav-links.active {
+        display: flex; /* إظهار القائمة عند الضغط على زر القائمة */
+    }
+
+    /* إضافة زر القائمة الجانبية */
+    .menu-icon {
+        display: block;
+        font-size: 24px;
+        cursor: pointer;
+    }
+}
+/* جعل الصور مرنة */
+.hero-img {
+    width: 100%;
+    height: auto;
+}
+
+/* تحسين الفقرة لتكون واضحة في الهواتف */
+p {
+    font-size: 16px;
+    text-align: center;
+    padding: 10px;
+}
+/* الحجم الافتراضي للنص على اللابتوب */
+p {
+    font-size: 30px; /* حجم الخط عند استخدام اللابتوب */
+}
+
+/* تغيير حجم الخط فقط عند تصفح الموقع من الهاتف */
+@media screen and (max-width: 768px) {
+    p {
+        font-size: 16px; /* حجم الخط عند استخدام الهاتف */
+    }
+}
